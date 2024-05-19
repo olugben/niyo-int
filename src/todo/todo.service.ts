@@ -28,7 +28,7 @@ export class TodoService {
           todo.isCompleted = false; 
 
           const createdTodo = await this.todoRepository.save(todo);
-          console.log('hi i save')
+          
 
           return createdTodo;
         } catch (error) {
@@ -43,7 +43,7 @@ export class TodoService {
           
            todo.isCompleted =isCompleted;
            todo.title=title;
-          console.log("todo from the back", todo.title)
+          
            return this.todoRepository.save(todo) 
          
         }

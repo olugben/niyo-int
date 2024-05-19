@@ -1,6 +1,6 @@
 write documentation
 input validations for socket.io
-push to github
+
 write test
 finding a way for the socket io to return message when no jwtheader is present 
 clean the code

@@ -10,7 +10,7 @@ export class WsAuthGuard implements CanActivate {
     const client = context.switchToWs().getClient();
     console.log("hi i reach here ")
     // const token = this.extractTokenFromHeaders(client.handshake.headers.authorization);
-     console.log(client.handshake.headers.authorization)
+     
     const  token =client.handshake.headers.authorization
     
     if (!token) {
