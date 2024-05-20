@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, InternalServerErrorException, NotFoundException, Param, Post, Put, UseGuards } from '@nestjs/common';
 import { TodoService } from './todo.service';
-import { AuthGuard } from 'src/auth.guard';
-import TodoDto, { UpdateTodoDto } from 'src/dto/todo.dto';
+import { AuthGuard } from '../auth.guard';
+import TodoDto, { UpdateTodoDto } from '../dto/todo.dto';
 
 
 @Controller('todo')

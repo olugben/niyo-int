@@ -2,10 +2,10 @@
 import { WebSocketGateway, WebSocketServer, SubscribeMessage, MessageBody } from '@nestjs/websockets';
 import { Server } from 'socket.io';
 
-import TodoDto, { UpdateTodoDto } from 'src/dto/todo.dto';
+import TodoDto, { UpdateTodoDto } from "../dto/todo.dto";
 import { TodoService } from './todo.service';
 import { UseGuards } from '@nestjs/common';
-import { WsAuthGuard } from 'src/ws.guards.jwt';
+import { WsAuthGuard } from '../ws.guards.jwt';
 
 
 
@@ -65,7 +65,7 @@ this.handleError(error)
     return "deleted";
   }
   private handleError(error: any) {
-    console.error('WebSocket error:', error.message);
+    
 
     this.server.emit('error', { message: error.message });
   }

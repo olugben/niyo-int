@@ -1,7 +1,7 @@
 import { Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import TodoDto from 'src/dto/todo.dto';
-import Todo from 'src/entities/todo.entity';
+import TodoDto from "../dto/todo.dto"
+import Todo from "../entities/todo.entity"
 import { Repository } from 'typeorm';
 
 
@@ -15,7 +15,7 @@ export class TodoService {
           const todos = await this.todoRepository.find();
           return todos;
         } catch (error) {
-          console.error('Error fetching todos:', error);
+         
           throw new InternalServerErrorException('Failed to fetch todos.');
         }
       }
@@ -32,7 +32,7 @@ export class TodoService {
 
           return createdTodo;
         } catch (error) {
-          console.error('Error creating todo:', error);
+          // console.error('Error creating todo:', error);
           throw new InternalServerErrorException('Failed to create todo.');
         }
       }
